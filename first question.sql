@@ -18,7 +18,6 @@ SELECT
     "year",
     industry,
     average_salary,
-    --previous_year_salary::NUMERIC (10,1) as previous_year_salary,
     ((average_salary - previous_year_salary) / previous_year_salary * 100)::numeric(10,2) AS growth_percentage
 FROM salary_growth
 WHERE previous_year_salary IS NOT NULL
